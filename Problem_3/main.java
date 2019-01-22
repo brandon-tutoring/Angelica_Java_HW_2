@@ -25,10 +25,14 @@ public class main {
 		card_nums.add("K");
 
 		List<String> card_suits = new ArrayList <>();
-		card_suits.add("♠");
-		card_suits.add("♥");
-		card_suits.add("♦");
-		card_suits.add("♣");
+		char spade = (char) \u2660 
+		card_suits.add(spade);
+		char heart = (char) \u2660 
+		card_suits.add(heart);
+		char diamond = (char) \u2660 
+		card_suits.add(diamond);
+		char clubs = (char) \u2660 
+		card_suits.add(clubs);
 
 		Random rand = new Random();
 		String random_card_num = card_nums.get(rand.nextInt(card_nums.size()));

@@ -6,71 +6,66 @@ public class main {
 
 	public static void main(String[] args) {
 		
-		Scanner input = new Scanner(System.in);
+		
 		System.out.println("let's play a game of odds and evens!");
-		System.out.println("What kind of player do you want the computer to be?(h or c)");
-		System.out.println("(H)onest Olivia");
-		System.out.println("(C)heating Chelsea");
-		String input1 = input.nextLine();
+		System.out.println("-------------------------------------------------");
+		System.out.println("-------------------------------------------------");
+		
+		Scanner kind_player_input = new Scanner(System.in);
+		System.out.println("What kind of player do you want the computer to be?(h or c) \n(H)onest Olivia \n(C)heating Chelsea");
+		String kind_player = kind_player_input.nextLine();
+		
 		String[] choices = {"1", "2"};
-		if(input1 == "h") {
-			Scanner input2 = new Scanner(System.in);
-			System.out.println("Choose odd or even (type the number corresponding to your choice)");
-			System.out.println("1- Odds");
-			System.out.println("2- Evens");
-			String input7 = input.nextLine();
+		
+		Scanner odd_even_input = new Scanner(System.in);
+		System.out.println("Choose odd or even (type the number corresponding to your choice) \n1- Odds \n2- Evens");
+		String odd_even = odd_even_input.nextLine();
 			
-			Scanner input3 = new Scanner(System.in);
-			System.out.println("1.. 2.. 3... go! (How many fingers - 1 or 2)");
-			String input4 = input.nextLine();
+		if (odd_even == 1){
+			System.out.println("You chose odds.")
+		}
+		else if (odd_even == 2) {
+			System.out.println("You chose evens.")
+		}
+			
+		Scanner fingers_input = new Scanner(System.in);
+		System.out.println("1.. 2.. 3... go! (How many fingers - 1 or 2)");
+		String fingers_amount = input.nextLine();
+		
+		if(kind_player == "h" of kind_player == "H") {
+			
 			java.util.Random random = new java.util.Random();
 			int generatedString = random.nextInt(choices.length);
 			System.out.println(generatedString);
-		}
 			
-		else if(input1 == "c"){
-			Scanner Input = new Scanner(System.in);
-			System.out.println("please choose odds or evens");
-			String input2 = input.nextLine();
-			if(input2 == "odds"){
-				Scanner input6 = new Scanner(System.in);
-				System.out.println("please enter your number");
-				String num_input = input.nextLine();
-				if(num_input == "1"){
-					System.out.println("Cheating computer cheats");
-					System.out.println("the computer puts out 1");
-					System.out.println("the total is 2");
-					System.out.println("you lost!");
-				}
-					
-				else if(num_input == "2"){
-					System.out.println("Cheating computer cheats");
-					System.out.println("the computer puts out 2");
-					System.out.println("the total is 4");
-					System.out.println("you lost!");
-				}	
-					
-			else if(input2 == "evens"){
-				Scanner input5 = new Scanner(System.in);
-				System.out.println("please enter your number");
-				String num_input1 = input.nextLine();
-			}
-				if(num_input == "1"){
-					System.out.println("Cheating computer cheats");
-					System.out.println("the computer puts out 2");
-					System.out.println("the total is 3");
-					System.out.println("you lost!");
-				}
-					
-				else if(num_input == "2"){
-					System.out.println("Cheating computer cheats");
-					System.out.println("the computer puts out 1");
-					System.out.println("the total is 3");
-					System.out.println("you lost!"); 
-				}	
 			
+					
 
+		else if(kind_player == "c" or kind_player == "C"){
+		
+			Scanner fingers_input = new Scanner(System.in);
+			System.out.println("1.. 2.. 3... go! (How many fingers - 1 or 2)");
+			String fingers_amount = input.nextLine();
+			
+			if(input2 == "odds"){
+
+				if(fingers_input == "1"){
+					System.out.println("Cheating computer cheats \nthe computer puts out 1 \nthe total is 2 \nyou lost!");
+				}
+					
+				else if(num_input == "2"){
+					System.out.println("Cheating computer cheats \nthe computer puts out 2 \nthe total is 4 \nyou lost!");
+				}	
+					
+			else if(fingers_amount == "evens"){
+			
+				if(num_input == "1"){
+					System.out.println("Cheating computer cheats \nthe computer puts out 2 \nthe total is 3 \nyou lost!");
+				}
+					
+				else if(num_input == "2"){
+					System.out.println("Cheating computer cheats \nthe computer puts out 1 \nthe total is 2 \nyou lost!");
+				}	
 			}
-		}
 	};
 }

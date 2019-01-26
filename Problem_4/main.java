@@ -5,10 +5,7 @@ import java.lang.*;
 
 public class main {
 
-	@SuppressWarnings({ "resource", "unused" })
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		
 		/* Circle 1 coordinates */
 		Scanner circle_1_coords_input = new Scanner(System.in);
@@ -18,9 +15,9 @@ public class main {
 		String circle_1_x_coord = circle_1_coords_split[0];
 		String circle_1_y_coord =circle_1_coords_split[1];
 		String circle_1_radii =circle_1_coords_split[2];
-		double circle_1_x_coord_int = Integer.parseInt(circle_1_x_coord);
-		double circle_1_y_coord_int = Integer.parseInt(circle_1_y_coord);	
-		double circle_1_radii_int = Integer.parseInt(circle_1_radii);	
+		double circle_1_x_coord_int = Double.parseDouble(circle_1_x_coord);
+		double circle_1_y_coord_int = Double.parseDouble(circle_1_y_coord);	
+		double circle_1_radii_int = Double.parseDouble(circle_1_radii);	
 		
 		/* Circle 2 coordinates */
 		Scanner circle_2_coords_input = new Scanner(System.in);
@@ -30,9 +27,9 @@ public class main {
 		String circle_2_x_coord = circle_2_coords_split[0];
 		String circle_2_y_coord =circle_2_coords_split[1];
 		String circle_2_radii =circle_1_coords_split[2];
-		double circle_2_x_coord_int = Integer.parseInt(circle_2_x_coord);
-		double circle_2_y_coord_int = Integer.parseInt(circle_2_y_coord);
-		double circle_2_radii_int = Integer.parseInt(circle_2_radii);	
+		double circle_2_x_coord_int = Double.parseDouble(circle_2_x_coord);
+		double circle_2_y_coord_int = Double.parseDouble(circle_2_y_coord);
+		double circle_2_radii_int = Double.parseDouble(circle_2_radii);	
 
 		
 		/* Distance between 2 centers */
@@ -44,13 +41,10 @@ public class main {
 
 		if (dist_btw_2_centers <= radii_1_minus_radii_2) {
 			System.out.println("circle2 is inside circle1");
-		}
-		else if (dist_btw_2_centers <= radii_1_plus_radii_2) {
+		}else if (dist_btw_2_centers <= radii_1_plus_radii_2) {
 			System.out.println("circle2 overlaps circle1");
-		}
-		else {
+		}else {
 			System.out.println("circle2 does not overlap circle1");
 		}
 	}
-
 }

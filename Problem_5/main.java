@@ -1,3 +1,9 @@
+// dont include .class file (same as previous problem)
+// GRADE: 0/10 (DOES NOT COMPILE !)
+
+
+
+
 import java.nio.charset.Charset;
 import java.util.Random;
 import java.util.Scanner;

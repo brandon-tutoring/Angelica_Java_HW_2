@@ -1,4 +1,7 @@
-// GRADE: 10/10 (A)
+// GRADE: 9.5/10 (A)
+
+// ONE MORE BUG:  try runnin the program w a very large number (i.e. 592754385789357943).  What happens?  Why do you think this is?
+// Try googling integers in Java and see if you can figure it out on your own (if not we will go over in the next lesson)
 
 
 import java.util.Scanner;

@@ -9,7 +9,6 @@ import java.util.Random;
 public class main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		List<String> card_nums = new ArrayList <>();
 		card_nums.add("A");
@@ -26,22 +25,30 @@ public class main {
 		card_nums.add("Q");
 		card_nums.add("K");
 
+
 		List<String> card_suits = new ArrayList <>();
-		char spade = (char) \u2660 
+		int c = 0x2660;
+		String spade = Character.toString((char)c);
 		card_suits.add(spade);
-		char heart = (char) \u2660 
+
+		int cheart = 0x2665;
+		String heart = Character.toString((char)cheart);
 		card_suits.add(heart);
-		char diamond = (char) \u2660 
-		card_suits.add(diamond);
-		char clubs = (char) \u2660 
+
+		int cclubs = 0x2666;
+		String clubs = Character.toString((char)cclubs);
 		card_suits.add(clubs);
+
+		int cdiamond = 0x2663;
+		String diamond = Character.toString((char)cdiamond);
+		card_suits.add(diamond);
 
 		Random rand = new Random();
 		String random_card_num = card_nums.get(rand.nextInt(card_nums.size()));
 		
 		String random_card_suit = card_suits.get(rand.nextInt(card_suits.size()));
 		
-		System.out.print("Your card is the " + (random_card_num) + " of " + random_card_suit + "s");
+		System.out.println("Your card is the " + (random_card_num) + " of " + random_card_suit + "s");
 		
 		
 	}

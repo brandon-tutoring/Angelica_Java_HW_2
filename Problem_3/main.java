@@ -1,6 +1,5 @@
 // GRADE: 0/10 DOES NOT COMPILE
 
-package problem2;
 
 import java.util.ArrayList;
 import java.util.List;

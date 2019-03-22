@@ -33,29 +33,46 @@ public class main {
 		System.out.println("1.. 2.. 3... go! (How many fingers - 1 or 2)");
 		String fingers_amount = input.nextLine();
 		
-		if(kind_player == "h" or kind_player == "H"); {
+		if(kind_player == "h" or kind_player == "H") {
 			String[] choices = {"1", "2"};
 			java.util.Random random = new java.util.Random();
 			int random_number = random.nextInt(choices.length);
 
-			int total = random_number + fingers_amount
+			int total = random_number + fingers_amount;
+			if (total % 2 = 0){
+				String result = "even";
+			} else if (total % 2 != 0) {
+				String result = "odd";
+			}
 
 			if(odd_even == "odds"){
 
+				if (result == "odd"){
+					String win_lose = "won";
+				} else if (result == "even"){
+					String win_lose = "lose";
+				}
+
 				if(fingers_amount == "1"){
-					System.out.println("The computer puts out " + random_number + "\nthe total is " + total + "\nyou " + );
+					System.out.println("The computer puts out " + random_number + "\nthe total is " + total + "\nyou " + win_lose + "!");
 				}else if(fingers_amount == "2"){
-					System.out.println("The computer puts out " + random_number + "\nthe total is " + total + "\nyou " + );
+					System.out.println("The computer puts out " + random_number + "\nthe total is " + total + "\nyou " + win_lose + "!");
 				}
 			}else if(odd_even == "evens"){
+
+				if (result == "odd"){
+					String win_lose = "lose";
+				} else if (result == "even"){
+					String win_lose = "won";
+				}
 			
 				if(fingers_amount == "1"){
-					System.out.println("The computer puts out " + random_number + "\nthe total is " + total + "\nyou " + );
+					System.out.println("The computer puts out " + random_number + "\nthe total is " + total + "\nyou " + win_lose + "!");
 				}else if(fingers_amount == "2"){
-					System.out.println("The computer puts out " + random_number + "\nthe total is " + total + "\nyou " + );
+					System.out.println("The computer puts out " + random_number + "\nthe total is " + total + "\nyou " + win_lose + "!");
 				}	
 			}
-		}else if(kind_player == "c" or kind_player == "C"); {
+		}else if(kind_player == "c" or kind_player == "C") {
 			
 			if(odd_even == "odds"){
 

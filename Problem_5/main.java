@@ -13,12 +13,21 @@ public class main {
 		
 		Scanner kind_player_input = new Scanner(System.in);
 		System.out.println("What kind of player do you want the computer to be?(h or c) \n(H)onest Olivia \n(C)heating Chelsea");
-		String kind_player = kind_player_input.nextLine();
-		System.out.println(kind_player);
+		String kind_player = kind_player_input.nextLine().toLowerCase();
+
+		while (!kind_player.equals("h") && !kind_player.equals("c")) {
+			System.out.println("That was not an h or c, please try again.");
+			kind_player = kind_player_input.nextLine();
+		}
 		
 		Scanner odd_even_input = new Scanner(System.in);
 		System.out.println("Choose odd or even (type the number corresponding to your choice) \n1- Odds \n2- Evens");
 		String odd_even = odd_even_input.nextLine();
+
+		while (!odd_even.equals("1") && !odd_even.equals("2")) {
+			System.out.println("That was not an 1 or 2, please try again.");
+			odd_even = odd_even_input.nextLine();
+		}
 			
 		if (odd_even.equals("1")){
 			System.out.println("You chose odds");
@@ -29,9 +38,15 @@ public class main {
 		Scanner fingers_input = new Scanner(System.in);
 		System.out.println("1.. 2.. 3... go! (How many fingers - 1 or 2)");
 		String fingers_amount = fingers_input.nextLine();
+
+		while (!fingers_amount.equals("1") && !fingers_amount.equals("2")) {
+			System.out.println("That was not an 1 or 2, please try again.");
+			fingers_amount = fingers_input.nextLine();
+		}
+		
 		int fingers_amount_int = Integer.parseInt(fingers_amount);
 		
-		if(kind_player.equals("h") || kind_player.equals("H")) {
+		if(kind_player.equals("h")) {
 
 			String[] choices = {"1", "2"};
 			java.util.Random random = new java.util.Random();
@@ -75,7 +90,7 @@ public class main {
 				}	
 			}
 
-		}else if (kind_player.equals("c") || kind_player.equals("C")) {
+		}else if (kind_player.equals("c")) {
 
 			if(odd_even.equals("1")){
 				System.out.println("Inside for loop odd");
